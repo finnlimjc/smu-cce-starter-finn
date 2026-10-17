@@ -1,0 +1,2 @@
+# smu-cce-starter-finn
+

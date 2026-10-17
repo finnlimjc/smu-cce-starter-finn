@@ -1,0 +1,4 @@
+*.pyc
+/.venv
+analyses-data/
+CLAUDE.md

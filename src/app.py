@@ -1,8 +1,9 @@
-"""Streamlit UI. Run with:  streamlit run app.py"""
+"""Streamlit UI. Run with:  streamlit run src/app.py"""
 
 import streamlit as st
 
-from src import analysis, storage
+import analysis
+import storage
 
 st.set_page_config(page_title="Stock Analysis", page_icon="📈")
 st.title("📈 Stock Analysis")

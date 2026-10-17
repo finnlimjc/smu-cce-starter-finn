@@ -1,18 +1,18 @@
 ## Installation Instructions
 
-This project is a beginner-friendly starter for working with financial data. It has a Streamlit web app (`app.py`, with logic in `src/`) built from the code in the `notebooks/` folder.
+This project is a beginner-friendly starter for working with financial data. It has a Streamlit web app (`src/app.py`, with logic in `src/`) built from the code in the `notebooks/` folder.
 
 ## Run the Streamlit app
 
 After installing the packages (steps below), run:
 
 ```bash
-streamlit run app.py
+streamlit run src/app.py
 ```
 
 Then enter a ticker (e.g. `MU`), choose an analysis type (filings, news, or stock price ratings) and click **Run**.
 
-- `app.py`: the Streamlit UI in the project root (the file you run).
+- `src/app.py`: the Streamlit UI (the file you run).
 - `src/analysis.py`: the logic, with functions taken from the notebooks (`get_financials`, `get_news`, `get_price`, `get_analyst_ratings`).
 - `src/storage.py`: helpers to build filenames and to save, list and read analyses.
 
@@ -28,10 +28,10 @@ The folder path is resolved from the location of the code, so it is the same whe
 
 ### Verify in Codespaces
 
-1. `streamlit run app.py`, run an analysis (e.g. `MU`, `news`) and click **Save Analysis**. A success message shows the filename.
+1. `streamlit run src/app.py`, run an analysis (e.g. `MU`, `news`) and click **Save Analysis**. A success message shows the filename.
 2. `ls analyses-data/` shows the new `.md` file; `cat` it to check the header and contents.
 3. Under **Previous Analyses**, select the entry (nothing appears yet), then click **Show** to see the pop-up.
-4. Stop the app, start it again from a different directory (`cd / && streamlit run /workspaces/smu-cce-starter-finn/app.py`); the saved analysis is still listed.
+4. Stop the app, start it again from a different directory (`cd / && streamlit run /workspaces/smu-cce-starter-finn/src/app.py`); the saved analysis is still listed.
 
 ### Verify on EC2
 
@@ -121,7 +121,6 @@ This is a good starter project for learning how Python notebooks connect to live
   .
   ├── lessons/          # Step-by-step course instructions
   ├── notebooks/        # Starter financial-data notebooks
-  ├── app.py            # Streamlit app (run this)
-  ├── src/              # Logic (analysis.py)
+  ├── src/              # app.py (run this), analysis.py, storage.py
   ├── requirements.txt  # Python dependencies
   └── README.md         # Course overview
